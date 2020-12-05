@@ -4,6 +4,8 @@ use App\Http\Controllers\apicontroller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Models\Coordinate;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,6 +29,9 @@ Route::middleware('auth:api')->group(function () {
     
     Route::resource('posts',PostController::class);
      Route::get('posts/user/{id}',[PostController::class,'userpost']);
+     Route::resource('coordinate',Coordinate::class);
+
+
 
 });
 
