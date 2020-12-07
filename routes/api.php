@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\apicontroller;
+use App\Http\Controllers\CoordinateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -29,7 +30,7 @@ Route::middleware('auth:api')->group(function () {
     
     Route::resource('posts',PostController::class);
      Route::get('posts/user/{id}',[PostController::class,'userpost']);
-     Route::resource('coordinate',Coordinate::class);
+     Route::resource('coordinate',CoordinateController::class);
 
 
 
