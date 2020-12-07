@@ -13,6 +13,7 @@ class Coordinate extends Model
         'name',
         'latitude',
         'logitude',
+        'user_id'
     ];
     use HasFactory;
 
